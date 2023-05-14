@@ -4,13 +4,18 @@ import "./App.css";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [next, setNext] = useState(false);
 
   useEffect(() => {
     axios.get("https://randomuser.me/api/").then((res) => {
       console.log(res.data.results);
       setUsers(res.data.results);
     });
-  }, []);
+  }, [next]);
+
+  const handleNext = () => {
+    setNext(!next);
+  };
 
   return (
     <div>
@@ -28,6 +33,7 @@ function App() {
             </div>
           ))}
         </div>
+        <button onClick={handleNext}>Next</button>
       </main>
       <footer>
         <p>created by Anjani</p>

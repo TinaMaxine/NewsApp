@@ -109,5 +109,30 @@ button {
   border-radius: 5px;
   margin-left: 20px;
   cursor: pointer;
+  position: absolute;
+  bottom:70px;
+  right:20px;
+}
+
+/* button {
+  background-color: #61dafb;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 20px;
+  position: relative;
+  bottom: 0px;
+  right: 20px;
+  cursor: pointer;
+} */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px; /* Adjust the height as needed */
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
 }
 
